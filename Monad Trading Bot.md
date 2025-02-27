@@ -1,24 +1,19 @@
-# Monad Trading Bot
-
-# 1. Sistem güncellemesi
+## 1. Sistem güncellemesi
 ```python
 sudo apt update && sudo apt upgrade -y
 ```
-
-# 2. NodeJS kurulumu
+## 2. NodeJS kurulumu
 ```python
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-
-# 3. Bot kurulumu
+## 3. Bot kurulumu
 ```python
 git clone https://github.com/omercanyenigun/monadbot.git
 cd monadbot
 npm install
 ```
-
-# 4. .env dosyası oluşturma
+## 4. .env dosyası oluşturma
 ```python
 cat > .env << EOL
 PRIVATE_KEY_1=0x...key1...
