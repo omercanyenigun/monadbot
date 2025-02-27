@@ -8,11 +8,10 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 ## 3. Bot kurulumu
-```bash
+```python
 git clone https://github.com/omercanyenigun/monadbot.git
 cd monadbot
 ```
-
 ## 4. package.json oluştur
 ```python
 cat > package.json << EOL
@@ -30,7 +29,6 @@ cat > package.json << EOL
 }
 EOL
 ```
-
 ## 5. .env dosyası oluşturma
 ```python
 cat > .env << EOL
@@ -45,7 +43,6 @@ EOL
 ```python
 npm install
 ```
-
 ```python
 screen -S monadbot
 ```
