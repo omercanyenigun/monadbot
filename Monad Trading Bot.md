@@ -9,8 +9,8 @@ sudo apt-get install -y nodejs
 ```
 ## 3. Bot kurulumu
 ```python
-git clone https://github.com/omercanyenigun/monadbot.git
-cd monadbot
+mkdir monadbot && cd monadbot
+wget https://raw.githubusercontent.com/omercanyenigun/monadbot/main/monadbot/monad.js
 ```
 ## 4. package.json oluştur
 ```python
