@@ -1,0 +1,17 @@
+{
+  "name": "monadbot",
+  "version": "1.0.0",
+  "main": "monad.js",
+  "scripts": {
+    "start": "node monad.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5"
+  },
+  "devDependencies": {},
+  "description": "Monad Testnet Trading Bot"
+}
