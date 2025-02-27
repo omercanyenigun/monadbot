@@ -113,7 +113,7 @@ const TOKENS = {
     USDC: {
         symbol: 'USDC',
         address: "0xf817257fed379853cDe0fa4F97AB987181B1E5Ea",
-        decimals: 6  // USDC genellikle 6 decimal kullanır
+        decimals: 6
     }
 };
 
@@ -126,14 +126,14 @@ const ROUTER = {
     ]
 };
 
-// ERC20 ABI güncelleme
+// ERC20 ABI
 const ERC20_ABI = [
     "function approve(address spender, uint256 amount) external returns (bool)",
     "function balanceOf(address account) external view returns (uint256)",
     "function allowance(address owner, address spender) external view returns (uint256)"
 ];
 
-// Alternatif RPC'leri ekleyelim
+// Alternatif RPC'ler
 const RPC_URLS = [
     "https://testnet-rpc.monad.xyz/",
     "https://monad-testnet.g.alchemy.com/v2/Bz53R41828QsmK844O1akHBt46uVJLXF"
@@ -174,7 +174,7 @@ async function retryRpcCall(callback, retries = 5, delay = 3000) {
     }
 }
 
-// Bakiye kontrol fonksiyonunu güncelleyelim
+// Bakiye kontrol fonksiyonunu
 async function checkBalance(wallet, token) {
     return retryRpcCall(async () => {
         const provider = new ethers.JsonRpcProvider(CHAIN.rpcs[0]);
@@ -185,7 +185,7 @@ async function checkBalance(wallet, token) {
     });
 }
 
-// RPC bekleme fonksiyonunu güncelleyelim
+// RPC bekleme fonksiyonu
 async function waitForReceipt(provider, txHash, retries = 3) {
     for (let i = 0; i < retries; i++) {
         try {
@@ -200,7 +200,7 @@ async function waitForReceipt(provider, txHash, retries = 3) {
     return null;
 }
 
-// Random miktar fonksiyonunu güncelleyelim
+// Random miktar fonksiyonu
 function getRandomAmount(min, max, tokenSymbol) {
     let amount;
     // Token türüne göre miktar aralığı
@@ -218,7 +218,7 @@ function getRandomAmount(min, max, tokenSymbol) {
     return Number(amount.toFixed(2));
 }
 
-// Trading fonksiyonunu güncelleyelim
+// Trading fonksiyonu
 async function runTrading(wallet) {
     try {
         const wmonBalance = await checkBalance(wallet, TOKENS.WMON);
@@ -264,7 +264,7 @@ function shuffleArray(array) {
     return array;
 }
 
-// performSwap fonksiyonunu güncelleyelim
+// performSwap fonksiyonu
 async function performSwap(wallet, tokenIn, tokenOut, amount) {
     try {
         const provider = new ethers.JsonRpcProvider(CHAIN.rpcs[0]);
@@ -334,7 +334,7 @@ async function performSwap(wallet, tokenIn, tokenOut, amount) {
     }
 }
 
-// Ana döngüyü güncelleyelim
+// Ana döngü
 async function main() {
     console.log("Bot başlatılıyor...");
     
